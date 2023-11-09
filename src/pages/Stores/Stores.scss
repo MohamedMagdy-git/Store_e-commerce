@@ -1,0 +1,56 @@
+@import '../../../maxStitic.scss';
+
+$color_1: #f9f9f9;
+$color_2: #DFE6DA;
+$color_3: #CBD5C0;
+$color_4: #758467;
+$color_5: #747bff;
+$background-color_1: #242424;
+$background-color_2: #1a1a1a;
+$background-color_3: #ffffff;
+$background-color_4: #f9f9f9;
+$background-color_5: #090a14;
+$border-color_1: #678184;
+
+
+.stores{
+    margin-top: 80px;
+    margin-bottom: 60px;
+
+    .titleSec {
+        text-transform:capitalize;
+        font-size: 22px;
+        color: #758467;
+        padding-bottom: 4px;
+        border-bottom: 2px solid #678184;
+        width: fit-content;
+        border-radius: 0px .5px 3px 0px;
+
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 16px;
+    }
+    .address-content {
+        margin-top: 8px;
+        color: #090a14;
+    }
+    .title {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        svg {
+            font-size: 20px;
+            margin-right: 4px;
+            color: #758467;
+        }
+    }
+
+    address {
+        margin-top: 8px;
+        color: #090a14c3;
+    }
+}

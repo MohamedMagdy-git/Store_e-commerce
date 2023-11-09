@@ -1,0 +1,154 @@
+@import '../../../maxStitic.scss';
+
+$color_1: #f9f9f9;
+$color_2: #DFE6DA;
+$color_3: #CBD5C0;
+$color_4: #758467;
+$color_5: #747bff;
+$font-family_1: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-family_2: inherit;
+$background-color_1: #242424;
+$background-color_2: #1a1a1a;
+$background-color_3: #ffffff;
+$background-color_4: #f9f9f9;
+$background-color_5: #090a14;
+$border-color_1: #678184;
+
+.favProducts {
+    margin: 90px  0px;
+    min-height: 70vh;
+
+    .titleSection {
+        font-size: 20px;
+        color: #758467;
+        padding-bottom: 4px;
+        border-bottom: 2px solid #678184;
+        width: fit-content;
+        border-radius:0px  3px 3px 0px;
+    }
+
+    .emptyFav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        img {
+            width: 200px;
+        }
+        .text {
+            font-size: 18px;
+            color: #8ba7b2;
+        }
+    }
+
+    .favItems {
+        margin-top: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: self-start;
+        justify-content: center;
+        
+        @include md {
+            align-items: center;
+            justify-content: start;
+            gap: 24px;
+            
+        }
+
+
+        .favItem {
+            max-width: 150px;
+            border: 1px solid #67818410;
+            background-color: #67818410;
+            border-radius: 8px;
+            min-height: 282px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include md {
+                max-width: 300px;
+                min-height: 282px;
+            }
+            
+            .image {
+                position: relative;
+                
+
+                .deleteitem {
+                    position: absolute;
+                    top: 6px;
+                    left: 6px;
+                    display: flex;
+                    align-items: center;
+                    width: fit-content;
+                    background-color: #758467;
+                    border-radius: 4px;
+                    gap: 6px;
+                    padding: 4px 8px;
+                    user-select: none;
+                    cursor: pointer;
+                    color: #ffffff;
+                    z-index: 2;
+                    
+                    .delText {
+                        order: 1;
+                        font-size: 12px;
+                        @include md {
+                            font-size: 14px;
+                        }
+                    }
+
+                    .delIcone {
+                        font-size: 14px;
+                        position: relative;
+                       
+
+                        @include md {
+
+                            font-size: 16px;
+                        }
+
+                    }
+                }
+
+            img {
+                width: 100%;
+                max-height: 382px;
+                border-bottom: 1px solid #75846727;
+                transition: .3s ease;
+                &:hover {
+                    filter: opacity(.8);
+                }
+            }    
+
+            }
+
+            .boxtext {
+                margin-top: 8px;
+                padding: 4px 8px;
+
+                .title {
+                    color: #090a14;
+    
+                }
+
+                .priceandtypebox {
+                    margin-top: 6px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .price {
+                        order: 2;
+                        // font-weight: 800;
+                    }
+                    .type {
+                    }
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,189 @@
+@import '../../../maxStitic.scss';
+
+$color_1: #f9f9f9;
+$color_2: #DFE6DA;
+$color_3: #CBD5C0;
+$color_4: #758467;
+$color_5: #747bff;
+$font-family_1: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-family_2: inherit;
+$background-color_1: #242424;
+$background-color_2: #1a1a1a;
+$background-color_3: #ffffff;
+$background-color_4: #f9f9f9;
+$background-color_5: #090a14;
+$border-color_1: #646cff;
+
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    
+
+    // padding: 6px;
+}
+
+.card-bg {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 6px 6px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    // border: 1px solid #1a1a1a11;
+}
+
+.card {
+display: flex;
+flex-direction: column;
+width: 120px;
+height: 156px;
+align-items: center;
+position: relative;
+margin-bottom: 10px;
+background-color: #1a1a1a0e;
+border-radius: 8px;
+border: 1px solid #1a1a1a11;
+
+
+
+
+
+@include sm {
+    width: 160px;
+    height: 205px;
+}
+
+@include md {
+    width: 210px;
+    height: 305px;
+}
+
+@include lg {
+    width: 250px;
+    height: 330px;
+    margin-bottom: 14px;
+}
+
+    .new {
+        position: absolute;
+        z-index: 4;
+        top: 12px;
+        left: 0px;
+        width: fit-content;
+        border-radius: 0px 4px 4px 0px;
+        background-color: #758467;
+        padding: 4px 6px;
+        padding-left: 8px;
+        color: #f8f8f8;
+        font-weight: 600;
+        font-size: 8px;
+        letter-spacing: .4ch;
+        text-transform: uppercase;
+        
+
+        @include md {
+            padding-left: 10px;
+            top: 16px;
+            font-size: 14px;
+        }
+    }
+
+    .images {
+
+        position: relative;
+        width: 100%;
+        align-items: center;
+        border-radius: 8px;
+        
+        
+        
+        
+        
+        img {
+            
+            width: 100%;
+            transition: .5s ease;
+            border-radius: 8px;
+            height: 154px;
+            transition: .3s ease;
+            border-radius: 8px;
+            // border: 1px solid #75846717;
+
+            @include sm {
+               height: 203px;
+            }
+
+            @include md {
+                height: 328px;
+            }
+
+            
+        }
+        .mainImg {
+            position: absolute;
+            z-index: 1;
+     
+        }
+
+        .secImg {
+            position: absolute;
+        }
+
+        &:hover {
+            .mainImg {
+                z-index: 1;
+                // transform: scale(1.1);
+               
+            }
+            .secImg {
+                z-index: 2;
+            //   transform: scale(1.1);
+            }
+        }
+        
+    }
+
+        
+}
+
+.title {
+    margin-top: 2px;
+    font-size: 14px;
+    color: #242424;
+    text-transform: capitalize;
+
+    @include md {
+        font-size: 16px;
+    }
+    @include lg {
+        font-size: 20px;
+    }
+
+}
+.prices {
+    display: flex;
+    align-items: center;
+    
+    gap: 8px;
+    margin-top: 8px;
+    font-size: 12px;
+    
+
+    @include md {
+        font-size: 14px;
+    }
+
+    .oldPerice {
+        opacity: .5;
+        font-weight: 500;
+        text-decoration: line-through;
+    }
+    .nowPrice {
+        color: #1a1a1a;
+        font-weight: 600;
+    }
+} 

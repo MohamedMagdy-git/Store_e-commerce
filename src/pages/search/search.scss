@@ -1,0 +1,136 @@
+@import '../../../maxStitic.scss';
+
+$color_1: #f9f9f9;
+$color_2: #DFE6DA;
+$color_3: #CBD5C0;
+$color_4: #758467;
+$color_5: #747bff;
+$font-family_1: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-family_2: inherit;
+$background-color_1: #242424;
+$background-color_2: #1a1a1a;
+$background-color_3: #ffffff;
+$background-color_4: #f9f9f9;
+$background-color_5: #090a14;
+$border-color_1: #678184;
+
+
+.search {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    min-height: calc(100vh - 120px);
+
+    .titleSec {
+        font-size: 22px;
+        color: #758467;
+        padding-bottom: 4px;
+        border-bottom: 2px solid #678184;
+        width: fit-content;
+        border-radius: 0px .5px 3px 0px;
+
+    }
+
+    .searchContiner {
+       
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        input[type="text"] {
+            width: 400px;
+            height: 40px;
+            font-size: 18px;
+            padding: 5px 8px;
+            outline: none;
+            border: none;
+            color: #242424;
+            background-color: #DFE6DA;
+            border-radius: 6px 0px 0px 6px;
+
+            :focus {
+                outline: none;
+            }
+        }
+        button[type="submit"] {
+            padding: 6.2px;
+            outline: none;
+            border-radius: 0px 6px 6px 0px;
+            border: none;
+            background-color: #758467;
+            color: #f9f9f9;
+            cursor: pointer;
+        }
+    }
+    .show {
+        display: block !important;
+        margin-top: 10px !important;
+    }
+    .boxSuggestion {
+        display: none;
+        position: relative;
+        border-radius: 6px;
+        padding: 16px;
+        padding-top: 16px;
+        margin-top: 4px;
+        width: 300px;
+        transition: .2s ease;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #758467;
+
+        @include md {
+            width: 440px;
+        }
+
+        .boxTitle {
+            font-size: 20px;
+            color: $color_1;
+
+        }
+
+        .titleSuggestion{
+            margin-top: 16px;
+            font-size: 16px;
+            color: $color_3;
+        }
+
+        .Suggestions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+
+            .Suggestion {
+                background-color: #9ca29695;
+                padding: 6px 8px;
+                border-radius: 6px;
+                cursor: pointer;
+                color: #f9f9f9;
+                margin-top: 4px;
+            } 
+
+            div {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                margin-top: 4px;
+                flex-wrap: wrap; 
+            }
+        }
+        .Suggestions:last-child {
+            margin-bottom: 16px;
+        }
+    }
+
+    .results {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        gap: 26px;
+        margin-top: 32px;
+    }
+}

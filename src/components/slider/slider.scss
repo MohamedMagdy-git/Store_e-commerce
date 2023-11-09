@@ -1,0 +1,70 @@
+@import '../../../maxStitic.scss';
+
+$color_1: #f9f9f9;
+$color_2: #DFE6DA;
+$color_3: #CBD5C0;
+$color_4: #758467;
+$color_5: #747bff;
+$background-color_1: #242424;
+$background-color_2: #1a1a1a;
+$background-color_3: #ffffff;
+$background-color_4: #f9f9f9;
+$background-color_5: #090a14;
+$border-color_1: #678184;
+
+.swiper {
+    width: 100%;
+ 
+    
+    @include md {
+        max-height: 100vh; 
+    }
+    height: auto;
+  }
+  
+  .swiper-slide {
+    overflow: hidden;
+    height: calc(100vh - 61px);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    //   .opacity {
+    //   background: rgb(36,36,36);
+    //   background: linear-gradient(180deg, rgba(36,36,36,0) 0%, white 80%);
+    //   width: 100%;
+    //   height: 150px;
+    //   z-index: 100;
+    //   position: absolute;
+    //   bottom: 0px;
+
+    //   @include md {
+    //     height: 160px;
+    //     bottom: -10px;
+    //     background: linear-gradient(180deg, rgba(36,36,36,0) 0%, white 80%);
+    //   }
+     
+    // }
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    background-origin: padding-box;
+    user-select: none;
+  }
+
+ 
+
+  .swiper-pagination-bullet-active {
+    background-color: $color_4 !important;
+  }
+
+
+  // .opacity {
+  //   background: rgb(36,36,36);
+  //   background: linear-gradient(180deg, rgba(36,36,36,0) 35%, rgba(117,132,103,1) 100%);
+  //   width: 100%;
+  //   height: 250px;
+  //   z-index: 100;
+  //   position: absolute;
+  // }

@@ -1,0 +1,29 @@
+@import '../../../maxStitic.scss';
+
+$color_1: #f9f9f9;
+$color_2: #DFE6DA;
+$color_3: #CBD5C0;
+$color_4: #758467;
+$color_5: #747bff;
+$font-family_1: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-family_2: inherit;
+$background-color_1: #242424;
+$background-color_2: #1a1a1a;
+$background-color_3: #ffffff;
+$background-color_4: #f9f9f9;
+$background-color_5: #090a14;
+$border-color_1: #646cff;
+
+.list {
+    display: flex;
+    gap: 8px;
+    row-gap: 40px;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center;
+
+    @include md {
+        justify-content: start;
+    }
+
+}
