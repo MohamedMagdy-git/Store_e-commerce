@@ -15,8 +15,8 @@ const Card = ({item}) => {
           {item?.attributes?.isNew && (<span className="new">New</span>)}
         <div className="images">
          
-          <img src={`http://localhost:1337/uploads/medium_` + `${(item?.attributes?.img?.data?.attributes.url)}g`.slice(9,-1)} alt="" className="mainImg" />
-          <img src={`http://localhost:1337/uploads/medium_` + `${(item?.attributes?.img2?.data?.attributes.url)}g`.slice(9,-1)} alt="" className="secImg" />
+          <img src={`${(item?.attributes?.img?.data?.attributes.url)}`} alt="" className="mainImg" />
+          <img src={`${(item?.attributes?.img2?.data?.attributes.url)}`} alt="" className="secImg" />
         </div>
       </div>
         <h2 className="title">{item?.attributes?.title?.slice(0,15)}</h2>

@@ -12,6 +12,7 @@ import { addToFav } from '../../components/Store/FavSlice';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { PuffLoader } from 'react-spinners';
 
 
 const Product = () => {
@@ -31,8 +32,8 @@ const Product = () => {
 
 
 
-  const imgs = [`http://localhost:1337${res?.img?.data?.attributes?.url}`,
-  `http://localhost:1337${res?.img2?.data?.attributes?.url}`]
+  const imgs = [`${res?.img?.data?.attributes?.url}`,
+  `${res?.img2?.data?.attributes?.url}`]
 
   const imgHandler = (activeNum) => {
     setSelectedImg(activeNum);
@@ -40,13 +41,25 @@ const Product = () => {
 
   
 
+  const skItem = () => {
+    return (
+      <PuffLoader color="#758467" />
+    )
+  }
     
 
 
 
   return (
     <>
-      <div className="product">
+    {loading ? 
+    
+    <div className="loading">
+                {skItem()}
+     </div>
+   
+    :
+    <div className="product">
         <ContentWrapper>
           <div className="container flex">
 
@@ -80,7 +93,7 @@ const Product = () => {
               dispatch(addToCart({
               id : id,
               title : res?.title,
-              img : `http://localhost:1337${res?.img?.data?.attributes?.url}`,
+              img : `${res?.img?.data?.attributes?.url}`,
               disc : res?.sub_categories?.data[0].attributes.title,
               price : res?.price,
               quantity : quantity,
@@ -99,7 +112,7 @@ const Product = () => {
               dispatch(addToFav({
               id : id,
               title : res?.title,
-              img : `http://localhost:1337${res?.img?.data?.attributes?.url}`,
+              img : `${res?.img?.data?.attributes?.url}`,
               type: res?.sub_categories?.data[0].attributes.title,
               price : res?.price,
             
@@ -146,6 +159,8 @@ const Product = () => {
           </div>
         </ContentWrapper>
       </div>
+    }
+      
     </>
   )
 }

@@ -158,4 +158,26 @@ $border-color_1: #646cff;
             }
         }
     }
+
+    .made {
+        color: #758467;
+        margin-top: 8px;
+        text-align: center;
+        @include md {
+            text-align: left;
+            margin-top: 4px;
+        }
+        .madeby {
+            text-transform: capitalize;
+            font-weight: bold;
+        }
+        a {
+            transition: .3s ease;
+            opacity: .6;
+            text-decoration: none;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
 }

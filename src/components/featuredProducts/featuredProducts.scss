@@ -110,3 +110,10 @@ $border-color_1: #646cff;
     font-variant: initial;
     line-height: 1;
 }
+
+.loading {
+    display: flex;
+    height: calc(100vh - 60px);
+    justify-content: center;
+    align-items: center;
+}

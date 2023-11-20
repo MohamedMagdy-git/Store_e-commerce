@@ -277,3 +277,9 @@ img {
     // bottom:   20px !important;
 }
 
+.loading {
+    display: flex;
+    height: calc(100vh - 60px);
+    justify-content: center;
+    align-items: center;
+}

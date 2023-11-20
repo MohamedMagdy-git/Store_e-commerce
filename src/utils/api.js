@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:1337/api";
-const API_TOKEN = '057a9a7bcaf81d3b43dd3c6a9879513d379ada396abc87a5870f5bf3f5e2e81cc249e4aa5f8afea638d4b28b69f9279448b29d982943c6f168c6ef6a793165c2f8f9dc2c43cf0d1cc7bbeb6fdf70aa0fa79f0709288e5734e8f901add54adfa8e0f3f2f19d1ea8efbda24c9468d61c6a73a80daad52ed9e255d4aa6ccb7b3649';
+const BASE_URL = "https://strapibackend-q121.onrender.com/api";
+const API_TOKEN = 'fe9c1703ba55e7b2952867417f614c439a37016a72170ac76765545172eac63499f2622b86b59f1e7296dca534c21f46e733ea7ed14d3e1874ad413c54206d77b3139163dfd55f2e80a76da0c6c06f1189fe21494e6ad9823ba66eaae09e65677471b1be17ac254417910f5a70e24602e6067413f0712b067c91ab5acc192bfa';
 
 const headers = {
     Authorization: "bearer "  + API_TOKEN,

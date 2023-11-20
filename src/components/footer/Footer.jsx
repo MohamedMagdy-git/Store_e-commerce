@@ -51,6 +51,10 @@ const Footer = () => {
             <img src={payment} alt=""/>
           </div>
         </div>
+        <div className="made">
+          <span className='madeby'>by: </span>
+          <a href="http://mohamedmagdy.surge.sh/" className="by" target="_blank" rel="noreferrer">Mohamed Magdy</a>
+          </div>
       </ContentWrapper>
       
     </div>

@@ -63,18 +63,18 @@ $border-color_1: #678184;
             border: 1px solid #67818410;
             background-color: #67818410;
             border-radius: 8px;
-            min-height: 282px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
 
             @include md {
-                max-width: 300px;
-                min-height: 282px;
+                max-width: 200px;
             }
             
             .image {
+             
                 position: relative;
+               
                 
 
                 .deleteitem {
@@ -116,9 +116,10 @@ $border-color_1: #678184;
 
             img {
                 width: 100%;
-                max-height: 382px;
+                height: 300px;
                 border-bottom: 1px solid #75846727;
                 transition: .3s ease;
+                object-fit: cover;
                 &:hover {
                     filter: opacity(.8);
                 }

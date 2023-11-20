@@ -31,16 +31,16 @@ const [toggle, setToggle] = useState(false)
   const ss =() =>{fethchDataFromApi(`/categories?populate=*&filters[title][$eq]=${id}`).then((results) =>
     {
     setNmae(results?.data?.data[0].attributes.title)
-    setUrl(results?.data?.data[0].attributes.img.data.attributes.url)
+    setUrl(results?.data.data[0].attributes.img.data[0].attributes.url)
   ;})};
 
+  
 
   useEffect(()=> {
     ss()
   }, [ss])
 
 
-const bannar = `http://localhost:1337`+`${url}`
 
 
 
@@ -57,7 +57,7 @@ const bannar = `http://localhost:1337`+`${url}`
     <>
           <div className="img-container">
             <span className='section-name'>{name}</span>
-            <img className='img-bannar' src={bannar ? bannar : 'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80'} alt="" />
+            <img className='img-bannar' src={url} alt="" />
             <div className="opacityy"></div>
           </div>
       <div className="products">
