@@ -61,6 +61,7 @@ const Product = () => {
     :
     <div className="product">
         <ContentWrapper>
+        <ToastContainer  theme='dark' type='success' position='bottom-right' progressClassName={'Toastify__progress-bar-theme--light'}/>
           <div className="container flex">
 
           
@@ -120,7 +121,7 @@ const Product = () => {
             toast(`Successfully Added To Favorites`)
 
             }}>
-              <ToastContainer  theme='dark' type='success' position='bottom-right' progressClassName={'Toastify__progress-bar-theme--light'}/>
+             
                  {addFavorites === id ? <FavoriteIcon /> : <FavoriteBorderOutlinedIcon />}
                 ADD TO FAV 
               </div>

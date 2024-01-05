@@ -229,6 +229,13 @@ $border-color_1: #646cff;
         object-fit: cover;
         width: 100%;
         height: inherit;
+        // margin: 0px 20px;
+        // margin-top: 60px;
+
+
+        // @include md {
+        //     height: calc(100vh - 60px);
+        // }
     }
 
     .opacityy {

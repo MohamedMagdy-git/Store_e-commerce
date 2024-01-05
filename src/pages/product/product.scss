@@ -97,6 +97,7 @@ $border-color_1: #646cff;
                 // margin-top: 12px;
 
                 img {
+                    border-radius: 8px;
                     width: 90%;
                     transition: .3s ease;
                     cursor: pointer;
@@ -268,7 +269,6 @@ $border-color_1: #646cff;
 
 
 img {
-    border-radius: 10px;
     object-fit: cover;
 }
 
@@ -279,7 +279,7 @@ img {
 
 .loading {
     display: flex;
-    height: calc(100vh - 60px);
+    height: 100vh;
     justify-content: center;
     align-items: center;
 }

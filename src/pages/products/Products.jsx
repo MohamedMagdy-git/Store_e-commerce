@@ -14,13 +14,13 @@ const Products = () => {
 
   const {id} = useParams('id')
 
-  const [url, setUrl] = useState()
+  const [url, setUrl] = useState(null)
   const [name, setNmae] = useState('')
   const [maxPrice, setMaxprice] = useState(2000)
   const [sort, setSort] = useState(null)
   const [ subCategory, setSubCategory] = useState([])
 
-  const {data, loading}  =  useFetch(`/sub-categories?populate=*&filters[categories][title][$eq]=${id}`);
+  const {data}  =  useFetch(`/sub-categories?populate=*&filters[categories][title][$eq]=${id}`);
   const res = data?.data.data;
 
   
